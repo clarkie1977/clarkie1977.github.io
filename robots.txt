@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.yourdroneservices.com/sitemap.xml
+Sitemap: https://www.dronescape.pro/sitemap.xml
 
 # Restrict sensitive directories
 Disallow: /cgi-bin/

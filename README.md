@@ -1,4 +1,4 @@
-# SkyView Drone Services Website
+# Dronescape Drone Services Website
 
 A modern, responsive website for a drone services business specializing in aerial photography, videography, mapping, and inspections.
 
@@ -122,4 +122,4 @@ This project is available for personal and commercial use.
 ## Contact
 
 For any questions or support, please contact:
-info@skyviewdrones.com 
+info@Dronescapedrones.com 
