@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="withgdpr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://www.stockfreeimages.com/front/img/favicon/apple-touch-icon.png?v=7kokjvrqWN">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.stockfreeimages.com/front/img/favicon/favicon-32x32.png?v=7kokjvrqWN">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://www.stockfreeimages.com/front/img/favicon/favicon-16x16.png?v=7kokjvrqWN">
+		<link rel="manifest" href="https://www.stockfreeimages.com/front/img/favicon/site.webmanifest?v=7kokjvrqWN">
+		<link rel="mask-icon" href="https://www.stockfreeimages.com/front/img/favicon/safari-pinned-tab.svg?v=7kokjvrqWN" color="#5bbad5">
+		<link rel="shortcut icon" href="https://www.stockfreeimages.com/front/img/favicon/favicon.ico?v=7kokjvrqWN">
+		<meta name="msapplication-TileColor" content="#f4f5f6">
+		<meta name="theme-color" content="#f4f5f6">
+		<title>Free Stock Images &amp; Photos by StockFreeImages.com</title>
+		<meta name="robots" content="index, follow">
+		<meta name="description" content="The largest collection of high quality free stock photos. Thousands of images added daily!">
+		<meta name="revisit-after" CONTENT="10 days">
+		<link href="https://front.stockfreeimages.com/css/404.min.css?20250325064350" type="text/css" rel="stylesheet" />
+		<!-- preloaders -->
+		<style>@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Signika;font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/signika/v20/vEFO2_JTCgwQ5ejvMV0O96D01E8J0tJXHKbOjM7sfA.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Signika;font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/signika/v20/vEFO2_JTCgwQ5ejvMV0O96D01E8J0tJXHKbPjM7sfA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Signika;font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/signika/v20/vEFO2_JTCgwQ5ejvMV0O96D01E8J0tJXHKbBjM4.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
+
+		<script type="text/javascript" src="https://front.stockfreeimages.com/js/dt-404_notfound.js?20250325064350"></script>
+
+		<!--<script src="https://www.google.com/recaptcha/api.js"></script>-->
+
+		<link href="https://thumbs.dreamstime.com" rel="preconnect">
+		<link href="https://front.stockfreeimages.com/" rel="preconnect">
+		<link href="https://fonts.googleapis.com" rel="preconnect" crossorigin>
+		<link href="https://www.gstatic.com" rel="preconnect" crossorigin>
+
+		<link rel="prefetch" href="https://images.stockfreeimages.com/front/fonts/stockfreeimages.ttf?ho4ypm" as="font" type="font/ttf" crossorigin="anonymous" />
+		<link rel="preload" href="https://images.stockfreeimages.com/front/fonts/stockfreeimages.ttf?ho4ypm" as="font" type="font/ttf" crossorigin/>
+
+		
+		<meta name="msvalidate.01" content="58573382094BCC07ED35D0E4551A243C" />
+		<meta name="google-site-verification" content="xpiyZUob5g76miUSGfdTZgkhwEo7TgCM0tklJo-F3U4" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MLH5P37');
+</script>
+<!-- End Google Tag Manager -->
+		<!--googleon: all-->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-31143771-1', 'stockfreeimages.com');
+			// ga('send', 'pageview');
+
+		</script>
+		<!--End googleon-->
+	</head>
+	<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLH5P37"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+		<header class="standard">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12 clearfix">
+						<a class="header-logo" href="https://www.stockfreeimages.com/">
+                            <picture>
+                                <source srcset="https://images.stockfreeimages.com/front/img/icons/sfi-bydt-logo-black.webp" type="image/webp">
+                                <img src="https://images.stockfreeimages.com/front/img/icons/sfi-bydt-logo-black.jpg"  alt="Stock Free Images">
+                            </picture>
+                        </a>
+						<div class="header-search">
+							<form name="searchform" action="/search.php" method="get" onsubmit="return searchsubmit();">
+								<input type="hidden" name="pg" value="1">
+								<input type="text" placeholder="Search free photos..." autocomplete="off" id="search" name="search"
+																onclick="if($(this).val() == 'free stock images') { $(this).val(''); $(this).css('color','#000000'); }" />
+								<button><i class="icon icon-search"></i></button>
+							</form>
+						</div>
+						<nav class="header-menu">
+							<div class="menu-mobile hidden-sm-up">
+								<a class="menu-mobile-search" href="#"><i class="icon icon-search"></i></a>
+								<a class="menu-mobile-toggle" href="#"><span></span></a>
+							</div>
+							<ul class="notlogged">
+								<li><a href="https://www.stockfreeimages.com/categories.html">Browse categories</a></li>
+								<li><a href="https://www.stockfreeimages.com/login">Log in</a></li>
+								<li><a class="highlight" href="https://www.stockfreeimages.com/register"><strong>Sign up</strong></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+<main class="error404">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+
+				<div class="error404-image"></div>
+				<h1>Page not found</h1>
+				<p>Soft kitty, warm kitty, little 404 of fur, happy kitty, sleepy kitty, purr purr purr.</p>
+				<a class="button mdm blue" href="https://www.stockfreeimages.com/">Go to homepage</a>
+
+			</div>
+		</div>
+	</div>
+</main>
+				 <footer>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-2 col-sm-3">
+							<a class="footer-logo" href="https://www.stockfreeimages.com/"><i class="icon-custom icon-logo-footer"></i></a>
+							<ul class="footer-social">
+								<li><a target="_blank" class="footer-social-twitter" rel="noreferrer" href="https://twitter.com/stockfreeimages"><i class="icon icon-twitter"></i></a></li>
+								<li><a target="_blank" class="footer-social-facebook" rel="noreferrer" href="https://www.facebook.com/StockFreeImages"><i class="icon icon-facebook"></i></a></li>
+							</ul>
+					</div>
+					<div class="col-lg-3 col-sm-4">
+							<ul class="footer-menu">
+								<li><a href="https://www.stockfreeimages.com/trending-photos">Trending photos</a></li>
+								<li><a href="https://www.stockfreeimages.com/faq.html">FAQ</a></li>
+								<li><a href="https://www.stockfreeimages.com/trending-illustrations">Trending illustrations</a></li>
+								<li><a href="https://www.stockfreeimages.com/aboutus">About us</a></li>
+								<li><a href="https://www.stockfreeimages.com/referrals.html">Spread the love</a></li>
+								<li><a href="https://www.stockfreeimages.com/contact">Contact us</a></li>
+							</ul>
+					</div>
+					<div class="col-lg-7 col-sm-5">
+						<ul class="footer-stats">
+							<li>
+								<strong>4,069,913</strong>
+								free images
+							</li>
+							<li>
+								<strong>67,224</strong>
+								photographers
+							</li>
+							<li>
+								<strong>1,384,027</strong>
+								registered users
+							</li>
+						</ul>
+						<a href="https://www.dreamstime.com/uploadfile#ref7703550" class="button sml blue" rel="nofollow" title="Upload image">Upload images</a>
+					</div>
+				</div>
+			</div>
+				<div class="footer-bottom container-fluid">
+					<div class="row">
+						<div class="col-sm-12">
+						<ul>
+							<li><a href="https://www.stockfreeimages.com/terms.html">Terms And Conditions</a></li>
+							<li><a href="https://www.stockfreeimages.com/privacy.html">Privacy Policy</a></li>
+							<li><a href="https://www.stockfreeimages.com/free-images-licenses">Free Images Licenses</a></li>
+						</ul>
+						</div>
+					</div>
+				</div>
+		</footer>
+	<script>
+var showgdpr = 1;
+var site_adr = 'https://www.stockfreeimages.com/';
+var CPage = '404_notfound.php';
+var last_page = 'https://stockfreeimages.com/rdu/download/33800367.jpg';
+var last_item = '';
+var actual_page = 'www.stockfreeimages.com/404_notfound.php';
+
+function trackClick(url, name) {
+	ga('send', 'event', 'Button', 'click', CPage + ': ' + name, {
+	     'transport': 'beacon',
+	     'hitCallback': function(){document.location = url;}
+	   });
+	return false;
+ }
+</script>
+
+<script>
+var showpopup = '/ajax/popup_dtfreetrial.php';
+</script>
+	</body>
+</html>
+<!-- : 2025-03-25 18:43:50 -->

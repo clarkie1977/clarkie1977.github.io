@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional drone services for aerial photography, videography, mapping, and inspections. High-quality drone solutions for businesses and individuals.">
+    <meta name="keywords" content="drone services, aerial photography, drone videography, mapping services, drone inspection">
+    <meta name="author" content="Drone Services">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdroneservices.com/">
+    <meta property="og:title" content="Professional Drone Services - Aerial Photography & Mapping">
+    <meta property="og:description" content="Professional drone services for aerial photography, videography, mapping, and inspections. High-quality drone solutions for businesses and individuals.">
+    <meta property="og:image" content="https://www.yourdroneservices.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourdroneservices.com/">
+    <meta property="twitter:title" content="Professional Drone Services - Aerial Photography & Mapping">
+    <meta property="twitter:description" content="Professional drone services for aerial photography, videography, mapping, and inspections. High-quality drone solutions for businesses and individuals.">
+    <meta property="twitter:image" content="https://www.yourdroneservices.com/images/og-image.jpg">
+    
+    <title>SkyView Drone Services | Professional Aerial Solutions</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Adding some styles for the video gallery section */
+        .video-gallery {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+        }
+        
+        .video-gallery .section-header {
+            margin-bottom: 3rem;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .video-description {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        .video-description h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-description p {
+            color: #555;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* Update hero section styles to use the new image */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="privacy.html">Learn more</a></p>
+            <div class="cookie-buttons">
+                <button id="cookieAccept" class="btn-primary">Accept</button>
+                <button id="cookieDecline" class="btn-secondary">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo/SkyView_Logo.png" alt="SkyView Drone Services Logo">
+                </a>
+                <div class="business-name">
+                    <h1>SkyView Drone Services</h1>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Logo Splash Screen -->
+        <div class="splash-screen" id="splashScreen">
+            <img src="images/logo/SkyView_Logo.png" alt="SkyView Drone Services Logo">
+        </div>
+        
+        <div class="hero-video-container">
+            <video id="heroVideo" autoplay muted loop playsinline class="hero-video">
+                <source src="videos/PORCHESTER CASTLE sfx-1.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img src="images/hero-background.jpg" alt="Aerial drone view">
+            </video>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1>Professional Drone Services</h1>
+                <h2>Capture the world from above</h2>
+                <p>High-quality aerial photography, videography, mapping, events, 360° media and inspection services</p>
+                <div class="hero-cta">
+                    <a href="services.html" class="btn-primary">Our Services</a>
+                    <a href="contact.html" class="btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Delivering exceptional aerial solutions for diverse industries</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Aerial Photography</h3>
+                    <p>High-resolution aerial images for real estate, events, landscapes, and more.</p>
+                    <a href="services.html#photography" class="read-more">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Aerial Videography</h3>
+                    <p>Cinematic 4K drone footage for films, commercials, events and marketing.</p>
+                    <a href="services.html#videography" class="read-more">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Mapping & Surveying</h3>
+                    <p>Accurate aerial mapping, 3D models, and topographic surveys.</p>
+                    <a href="services.html#mapping" class="read-more">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Events</h3>
+                    <p>Capture unforgettable moments with dynamic, high-quality coverage for weddings, parties, and corporate events.</p>
+                    <a href="services.html#events" class="read-more">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera-rotate"></i>
+                    </div>
+                    <h3>360° Media</h3>
+                    <p>Immersive 360° video experiences for virtual tours, events, and interactive media.</p>
+                    <a href="services.html#360media" class="read-more">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Inspections</h3>
+                    <p>Safe and cost-effective inspections for buildings, infrastructure, and utilities.</p>
+                    <a href="services.html#inspections" class="read-more">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="portfolio-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A glimpse of our remarkable drone work</p>
+            </div>
+            <div class="portfolio-grid">
+                <a href="portfolio.html#project1" class="portfolio-item">
+                    <img src="images/portfolio/portfolio-1.jpg" alt="Aerial view of a coastline" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Coastal Resort Mapping</h3>
+                        <span>Mapping & Photography</span>
+                    </div>
+                </a>
+                <a href="portfolio.html#project2" class="portfolio-item">
+                    <img src="images/portfolio/portfolio-2.jpg" alt="Drone footage of a construction site" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Construction Progress</h3>
+                        <span>Inspection & Videography</span>
+                    </div>
+                </a>
+                <a href="portfolio.html#project3" class="portfolio-item">
+                    <img src="images/portfolio/portfolio-3.jpg" alt="Aerial view of a wedding venue" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Luxury Wedding</h3>
+                        <span>Event Photography</span>
+                    </div>
+                </a>
+                <a href="portfolio.html#project4" class="portfolio-item">
+                    <img src="images/portfolio/portfolio-4.jpg" alt="Drone inspection of solar panels" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Solar Farm Inspection</h3>
+                        <span>Thermal Imaging</span>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-cta">
+                <a href="portfolio.html" class="btn-secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Drone Footage</h2>
+                <p>Experience our stunning aerial videography</p>
+            </div>
+            <div class="video-grid">
+                <div>
+                    <div class="video-container">
+                        <video controls preload="metadata" poster="images/portfolio/portfolio-5.jpg">
+                            <source src="videos/PORCHESTER CASTLE sfx-1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-description">
+                        <h3>Porchester Castle</h3>
+                        <p>Cinematic aerial tour of the historic Porchester Castle</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="video-container">
+                        <video controls preload="metadata" poster="images/portfolio/portfolio-7.jpg">
+                            <source src="videos/Hampto Court 10k final-1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-description">
+                        <h3>Hampton Court</h3>
+                        <p>Detailed aerial exploration of Hampton Court and its surroundings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>What our clients say about our drone services</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"SkyView provided exceptional aerial photography for our real estate listings. The images were stunning and helped us sell properties faster."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/testimonial-1.jpg" alt="Sarah Johnson" loading="lazy">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Real Estate Agency</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"The mapping services provided by SkyView were incredibly accurate and delivered on time. Their team is professional and a pleasure to work with."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/testimonial-2.jpg" alt="Michael Chen" loading="lazy">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Construction Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"We hired SkyView for our annual inspection of our solar farm. Their thermal imaging capabilities saved us thousands in maintenance costs."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/testimonial-3.jpg" alt="Emma Rodriguez" loading="lazy">
+                        <div class="author-info">
+                            <h4>Emma Rodriguez</h4>
+                            <p>Energy Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to elevate your perspective?</h2>
+                <p>Contact us today to discuss your drone service needs and receive a custom quote.</p>
+                <a href="contact.html" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo/SkyView_Logo.png" alt="SkyView Drone Services Logo">
+                    </a>
+                    <p>Professional drone services for aerial photography, videography, mapping, and inspections. Serving clients nationwide with FAA-certified pilots.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#photography">Aerial Photography</a></li>
+                        <li><a href="services.html#videography">Aerial Videography</a></li>
+                        <li><a href="services.html#mapping">Mapping & Surveying</a></li>
+                        <li><a href="services.html#inspections">Inspections</a></li>
+                        <li><a href="services.html#real-estate">Real Estate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Drone Avenue, Suite 456, Skyview City, SV 12345</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+15551234567">(555) 123-4567</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@skyviewdrones.com">info@skyviewdrones.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SkyView Drone Services. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+</body>
+</html> 

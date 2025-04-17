@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View our portfolio of drone photography, videography, mapping, and inspection projects. High-quality aerial solutions by SkyView Drone Services.">
+    <meta name="keywords" content="drone portfolio, aerial photography examples, drone videography, drone inspection projects">
+    <meta name="author" content="Drone Services">
+    <meta name="robots" content="index, follow">
+    
+    <title>Portfolio | SkyView Drone Services</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Portfolio Page Specific Styles */
+        .page-banner {
+            height: 300px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/banners/portfolio-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            margin-top: 80px; /* Account for fixed header */
+        }
+        
+        .banner-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .banner-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-section {
+            padding: 5rem 0;
+        }
+        
+        .portfolio-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .category-btn {
+            padding: 0.7rem 1.5rem;
+            background-color: var(--light-color);
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            height: 300px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 62, 80, 0.8);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-overlay h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .portfolio-overlay p {
+            color: var(--light-color);
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: #fff;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .portfolio-btn:hover {
+            background-color: #fff;
+            color: var(--secondary-color);
+        }
+        
+        .portfolio-details {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+        
+        .details-container {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            max-width: 1000px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .details-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 2;
+            transition: var(--transition);
+        }
+        
+        .details-close:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .details-content {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+        
+        .details-header {
+            margin-bottom: 2rem;
+        }
+        
+        .details-header h2 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .details-header p {
+            color: #666;
+        }
+        
+        .details-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .gallery-img {
+            height: 200px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .details-info {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .details-info h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+        }
+        
+        .meta-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+        
+        .meta-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 992px) {
+            .details-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-banner {
+                height: 250px;
+            }
+            
+            .banner-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .portfolio-section {
+                padding: 3rem 0;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-banner {
+                height: 200px;
+            }
+            
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+            
+            .details-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-meta {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Video Gallery Section Styles */
+        .video-gallery {
+            background-color: var(--light-color);
+            padding: 5rem 0;
+        }
+        
+        .video-gallery .section-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .video-gallery .section-header h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .video-gallery .section-header p {
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .video-description {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        .video-description h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-description p {
+            color: #555;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="privacy.html">Learn more</a></p>
+            <div class="cookie-buttons">
+                <button id="cookieAccept" class="btn-primary">Accept</button>
+                <button id="cookieDecline" class="btn-secondary">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo/SkyView_Logo.png" alt="SkyView Drone Services Logo">
+                </a>
+                <div class="business-name">
+                    <h1>SkyView Drone Services</h1>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <div class="container">
+                <h1>Our Portfolio</h1>
+                <p>Explore our diverse collection of aerial photography, videography, mapping, and inspection projects</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-categories">
+                <button class="category-btn active" data-category="all">All Projects</button>
+                <button class="category-btn" data-category="photography">Photography</button>
+                <button class="category-btn" data-category="videography">Videography</button>
+                <button class="category-btn" data-category="mapping">Mapping</button>
+                <button class="category-btn" data-category="inspection">Inspection</button>
+                <button class="category-btn" data-category="real-estate">Real Estate</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="photography real-estate" id="project1">
+                    <img src="images/portfolio/project1.jpg" alt="Coastal resort aerial photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Coastal Resort</h3>
+                        <p>Aerial photography for a luxury oceanfront property</p>
+                        <button class="portfolio-btn" data-project="project1">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="videography" id="project2">
+                    <img src="images/portfolio/project2.jpg" alt="Construction progress aerial videography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Construction Progress</h3>
+                        <p>Monthly progress tracking for a major development project</p>
+                        <button class="portfolio-btn" data-project="project2">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="photography" id="project3">
+                    <img src="images/portfolio/project3.jpg" alt="Wedding venue aerial photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Luxury Wedding</h3>
+                        <p>Aerial photography for an exclusive estate wedding</p>
+                        <button class="portfolio-btn" data-project="project3">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="portfolio-item" data-category="inspection" id="project4">
+                    <img src="images/portfolio/project4.jpg" alt="Solar farm inspection with thermal imaging" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Solar Farm Inspection</h3>
+                        <p>Thermal imaging to identify underperforming panels</p>
+                        <button class="portfolio-btn" data-project="project4">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-category="mapping" id="project5">
+                    <img src="images/portfolio/project5.jpg" alt="3D terrain mapping for construction" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Terrain Mapping</h3>
+                        <p>3D topographic survey for commercial development</p>
+                        <button class="portfolio-btn" data-project="project5">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-category="real-estate" id="project6">
+                    <img src="images/portfolio/project6.jpg" alt="Luxury estate aerial photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Estate Property</h3>
+                        <p>Comprehensive aerial imagery for a high-end listing</p>
+                        <button class="portfolio-btn" data-project="project6">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="portfolio-item" data-category="videography" id="project7">
+                    <img src="images/portfolio/project7.jpg" alt="Adventure sports aerial videography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Mountain Biking Event</h3>
+                        <p>Dynamic aerial coverage of an outdoor sports competition</p>
+                        <button class="portfolio-btn" data-project="project7">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="portfolio-item" data-category="inspection" id="project8">
+                    <img src="images/portfolio/project8.jpg" alt="Building facade inspection" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Building Inspection</h3>
+                        <p>Detailed visual inspection of a high-rise facade</p>
+                        <button class="portfolio-btn" data-project="project8">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="portfolio-item" data-category="mapping" id="project9">
+                    <img src="images/portfolio/project9.jpg" alt="Agricultural mapping with NDVI" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Agricultural Analysis</h3>
+                        <p>Vegetation health mapping for precision agriculture</p>
+                        <button class="portfolio-btn" data-project="project9">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Drone Video Showcase</h2>
+                <p>Experience the breathtaking aerial perspectives in our video portfolio</p>
+            </div>
+            <div class="video-grid">
+                <div>
+                    <div class="video-container">
+                        <video controls preload="metadata" poster="images/portfolio/project1.jpg">
+                            <source src="videos/PORCHESTER CASTLE sfx-1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-description">
+                        <h3>Porchester Castle</h3>
+                        <p>Cinematic aerial tour of the historic Porchester Castle, showcasing its architecture and surrounding landscape.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="video-container">
+                        <video controls preload="metadata" poster="images/portfolio/project7.jpg">
+                            <source src="videos/Hampto Court 10k final-1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-description">
+                        <h3>Hampton Court</h3>
+                        <p>Detailed aerial exploration of Hampton Court Palace and its beautiful gardens, captured in stunning high resolution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Details Modal -->
+    <div class="portfolio-details" id="portfolioDetails">
+        <div class="details-container">
+            <div class="details-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="details-content" id="detailsContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to create your own success story?</h2>
+                <p>Contact us today to discuss your drone service needs and receive a custom quote.</p>
+                <a href="contact.html" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo/SkyView_Logo.png" alt="SkyView Drone Services Logo">
+                    </a>
+                    <p>Professional drone services for aerial photography, videography, mapping, and inspections. Serving clients nationwide with FAA-certified pilots.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#photography">Aerial Photography</a></li>
+                        <li><a href="services.html#videography">Aerial Videography</a></li>
+                        <li><a href="services.html#mapping">Mapping & Surveying</a></li>
+                        <li><a href="services.html#inspections">Inspections</a></li>
+                        <li><a href="services.html#real-estate">Real Estate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Drone Avenue, Suite 456, Skyview City, SV 12345</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+15551234567">(555) 123-4567</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@skyviewdrones.com">info@skyviewdrones.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SkyView Drone Services. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script>
+        // Portfolio Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get selected category
+                    const selectedCategory = this.getAttribute('data-category');
+                    
+                    // Filter portfolio items
+                    portfolioItems.forEach(item => {
+                        const itemCategories = item.getAttribute('data-category').split(' ');
+                        
+                        if (selectedCategory === 'all' || itemCategories.includes(selectedCategory)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Portfolio Details
+            const portfolioButtons = document.querySelectorAll('.portfolio-btn');
+            const portfolioDetails = document.getElementById('portfolioDetails');
+            const detailsContent = document.getElementById('detailsContent');
+            const detailsClose = document.querySelector('.details-close');
+            
+            // Sample project details data
+            const projectsData = {
+                project1: {
+                    title: 'Coastal Resort Photography',
+                    category: 'Real Estate Photography',
+                    client: 'Oceanview Resorts',
+                    date: 'June 2023',
+                    description: 'This project involved comprehensive aerial photography for a luxury coastal resort. We captured the property from multiple angles, highlighting the oceanfront location, amenities, and surrounding landscape. The images were used for marketing materials, the resort\'s website, and social media campaigns.',
+                    gallery: [
+                        'images/portfolio/project1-1.jpg',
+                        'images/portfolio/project1-2.jpg',
+                        'images/portfolio/project1-3.jpg'
+                    ]
+                },
+                project2: {
+                    title: 'Construction Progress Documentation',
+                    category: 'Construction Videography',
+                    client: 'Metro Developers',
+                    date: 'Ongoing (Monthly)',
+                    description: 'We provide monthly aerial documentation of this major commercial development project. Our services include 4K video footage and high-resolution still images that track construction progress, identify potential issues, and provide valuable data for project stakeholders. The content is used for investor updates, documentation, and marketing purposes.',
+                    gallery: [
+                        'images/portfolio/project2-1.jpg',
+                        'images/portfolio/project2-2.jpg',
+                        'images/portfolio/project2-3.jpg'
+                    ]
+                }
+                // Additional project data would be added here
+            };
+            
+            portfolioButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const projectId = this.getAttribute('data-project');
+                    const project = projectsData[projectId];
+                    
+                    // If project data exists
+                    if (project) {
+                        let galleryHTML = '';
+                        
+                        // Add gallery images if available
+                        if (project.gallery && project.gallery.length > 0) {
+                            galleryHTML = '<div class="details-gallery">';
+                            project.gallery.forEach(image => {
+                                galleryHTML += `
+                                    <div class="gallery-img">
+                                        <img src="${image}" alt="${project.title}" loading="lazy">
+                                    </div>
+                                `;
+                            });
+                            galleryHTML += '</div>';
+                        }
+                        
+                        // Populate details content
+                        detailsContent.innerHTML = `
+                            <div class="details-header">
+                                <h2>${project.title}</h2>
+                                <p>${project.category}</p>
+                            </div>
+                            
+                            <div class="project-meta">
+                                <div class="meta-item">
+                                    <h4>Client</h4>
+                                    <p>${project.client}</p>
+                                </div>
+                                <div class="meta-item">
+                                    <h4>Date</h4>
+                                    <p>${project.date}</p>
+                                </div>
+                                <div class="meta-item">
+                                    <h4>Service</h4>
+                                    <p>${project.category}</p>
+                                </div>
+                            </div>
+                            
+                            ${galleryHTML}
+                            
+                            <div class="details-info">
+                                <h3>Project Details</h3>
+                                <p>${project.description}</p>
+                            </div>
+                        `;
+                        
+                        // Show details modal
+                        portfolioDetails.style.display = 'flex';
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    } else {
+                        // Fallback for projects without detailed data
+                        detailsContent.innerHTML = `
+                            <div class="details-header">
+                                <h2>${this.parentElement.querySelector('h3').textContent}</h2>
+                                <p>${this.parentElement.querySelector('p').textContent}</p>
+                            </div>
+                            
+                            <div class="details-info">
+                                <p>Detailed information about this project is coming soon. Please check back later or contact us for more information.</p>
+                            </div>
+                        `;
+                        
+                        // Show details modal
+                        portfolioDetails.style.display = 'flex';
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    }
+                });
+            });
+            
+            // Close details modal
+            detailsClose.addEventListener('click', function() {
+                portfolioDetails.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            });
+            
+            // Close modal on outside click
+            portfolioDetails.addEventListener('click', function(e) {
+                if (e.target === portfolioDetails) {
+                    portfolioDetails.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Restore scrolling
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore SkyView's professional drone services including aerial photography, videography, mapping, and inspections for various industries.">
+    <meta name="keywords" content="drone services, aerial photography, drone videography, mapping services, drone inspection, real estate drone">
+    <meta name="author" content="Drone Services">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdroneservices.com/services.html">
+    <meta property="og:title" content="Professional Drone Services - Aerial Solutions for Every Need">
+    <meta property="og:description" content="Explore SkyView's professional drone services including aerial photography, videography, mapping, and inspections for various industries.">
+    <meta property="og:image" content="https://www.yourdroneservices.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourdroneservices.com/services.html">
+    <meta property="twitter:title" content="Professional Drone Services - Aerial Solutions for Every Need">
+    <meta property="twitter:description" content="Explore SkyView's professional drone services including aerial photography, videography, mapping, and inspections for various industries.">
+    <meta property="twitter:image" content="https://www.yourdroneservices.com/images/og-image.jpg">
+    
+    <title>Services | SkyView Drone Services</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Services Page Specific Styles */
+        .page-banner {
+            height: 300px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/banners/services-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            margin-top: 80px; /* Account for fixed header */
+        }
+        
+        .banner-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .banner-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .service-section {
+            padding: 5rem 0;
+        }
+        
+        .service-section:nth-child(even) {
+            background-color: var(--light-color);
+        }
+        
+        .service-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .service-container.image-right {
+            flex-direction: row-reverse;
+        }
+        
+        .service-content {
+            flex: 1;
+        }
+        
+        .service-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .service-content p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .service-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .service-features {
+            margin-top: 2rem;
+        }
+        
+        .service-features h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .feature-item {
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-item h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-color);
+        }
+        
+        .feature-item h4 i {
+            font-size: 1rem;
+        }
+        
+        .feature-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+        
+        .service-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .service-cta .btn-primary {
+            padding: 1rem 2rem;
+        }
+        
+        @media (max-width: 992px) {
+            .service-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .service-container.image-right {
+                flex-direction: column;
+            }
+            
+            .service-image {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-banner {
+                height: 250px;
+            }
+            
+            .banner-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .service-section {
+                padding: 3rem 0;
+            }
+            
+            .service-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-banner {
+                height: 200px;
+            }
+            
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="privacy.html">Learn more</a></p>
+            <div class="cookie-buttons">
+                <button id="cookieAccept" class="btn-primary">Accept</button>
+                <button id="cookieDecline" class="btn-secondary">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo/SkyView_Logo.png" alt="SkyView Drone Services Logo">
+                </a>
+                <div class="business-name">
+                    <h1>SkyView Drone Services</h1>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <div class="container">
+                <h1>Our Drone Services</h1>
+                <p>Professional aerial solutions tailored to your specific needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aerial Photography Service -->
+    <section id="photography" class="service-section">
+        <div class="container">
+            <div class="service-container">
+                <div class="service-content">
+                    <h2>Aerial Photography</h2>
+                    <p>Our professional aerial photography services provide stunning high-resolution images that capture your property, event, or landscape from breathtaking new perspectives. Using state-of-the-art UAV technology and professional-grade cameras, we deliver crisp, detailed photographs that showcase your subject in the best possible light.</p>
+                    <p>Whether you need aerial imagery for real estate marketing, construction documentation, event coverage, or creative projects, our experienced pilots and photographers work with you to understand your vision and deliver exceptional results that exceed expectations.</p>
+                    
+                    <div class="service-features">
+                        <h3>Photography Applications</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h4><i class="fas fa-home"></i> Real Estate</h4>
+                                <p>Showcase properties with stunning aerial views that highlight location, features and surroundings.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-hard-hat"></i> Construction</h4>
+                                <p>Document progress, inspect sites, and create marketing materials for development projects.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-glass-cheers"></i> Events</h4>
+                                <p>Capture spectacular aerial views of weddings, corporate events, festivals and sporting events.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-mountain"></i> Landscapes</h4>
+                                <p>Create stunning landscape photography for tourism, conservation, or artistic applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/aerial-photography.jpg" alt="Drone aerial photography of a beautiful landscape" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="service-cta">
+                <a href="contact.html" class="btn-primary">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aerial Videography Service -->
+    <section id="videography" class="service-section">
+        <div class="container">
+            <div class="service-container image-right">
+                <div class="service-content">
+                    <h2>Aerial Videography</h2>
+                    <p>Our aerial videography services bring your vision to life with smooth, professional-quality footage captured from above. Using high-end drones equipped with stabilized 4K and 6K camera systems, we create cinematic aerial content that engages your audience and showcases your subject with dynamic perspectives impossible to achieve from the ground.</p>
+                    <p>From real estate and construction to commercials, film productions, and special events, our skilled pilots and videographers work collaboratively with you to plan and execute aerial sequences that tell your story effectively and create a lasting impression.</p>
+                    
+                    <div class="service-features">
+                        <h3>Videography Applications</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h4><i class="fas fa-film"></i> Commercial Production</h4>
+                                <p>Add production value to your commercial with dynamic aerial perspectives and establishing shots.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-building"></i> Property Tours</h4>
+                                <p>Create engaging video tours of properties, developments and commercial facilities.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-ring"></i> Wedding & Events</h4>
+                                <p>Capture unforgettable moments from unique aerial perspectives that complement ground footage.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-truck-monster"></i> Adventure Sports</h4>
+                                <p>Follow action and adventure sports with dynamic aerial tracking shots and scenic overviews.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/aerial-videography.jpg" alt="Drone filming aerial footage over a coastal area" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="service-cta">
+                <a href="contact.html" class="btn-primary">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapping & Surveying Section -->
+    <section id="mapping" class="service-section">
+        <div class="container service-container">
+            <div class="service-content">
+                <h2>Mapping & Surveying</h2>
+                <p>Leverage the power of drone technology for precise mapping and surveying. Our services provide accurate orthomosaic maps, 3D models, and topographic data essential for construction, land management, agriculture, and environmental monitoring.</p>
+                <p>We utilize state-of-the-art drones equipped with high-resolution cameras and GPS technology to capture detailed aerial data. This data is then processed using advanced photogrammetry software to generate actionable insights and deliverables tailored to your project requirements.</p>
+                <div class="service-features">
+                    <h3>Key Features:</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-ruler-combined"></i> High Accuracy Data</h4>
+                            <p>Achieve survey-grade accuracy for reliable measurements and analysis.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-cubes"></i> 3D Modeling</h4>
+                            <p>Create detailed 3D models of sites, structures, and terrains.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-chart-area"></i> Topographic Surveys</h4>
+                            <p>Generate contour maps and digital elevation models (DEMs).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-image">
+                <img src="images/services/service-mapping.jpg" alt="Drone mapping a construction site" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="service-section">
+        <div class="container service-container image-right">
+            <div class="service-content">
+                <h2>Event Coverage</h2>
+                <p>Capture the full scale and excitement of your event from breathtaking aerial perspectives. Our drone services provide dynamic photo and video coverage for weddings, corporate events, festivals, sports competitions, and private parties.</p>
+                <p>We work closely with event planners and organizers to ensure safe and unobtrusive flight operations while delivering stunning visuals that showcase the energy and atmosphere of your occasion. Add a unique and memorable element to your event documentation.</p>
+                <div class="service-features">
+                    <h3>Key Features:</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-video"></i> Cinematic Video</h4>
+                            <p>High-definition video footage capturing key moments and panoramic views.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-camera"></i> Unique Photo Angles</h4>
+                            <p>Capture group shots, venue layouts, and candid moments from above.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-share-alt"></i> Shareable Content</h4>
+                            <p>Create engaging promotional material or lasting memories for attendees.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-image">
+                <img src="images/services/service-events.jpg" alt="Drone capturing an outdoor festival" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 360 Media Section -->
+    <section id="360media" class="service-section">
+        <div class="container service-container">
+            <div class="service-content">
+                <h2>360° Media Production</h2>
+                <p>Immerse your audience with captivating 360° aerial photography and videography. Ideal for creating virtual tours of properties, showcasing travel destinations, documenting large-scale projects, or providing interactive event experiences.</p>
+                <p>Our specialized drones capture seamless panoramic views, which can be used for interactive web content, VR headsets, or social media platforms. Offer your audience a truly engaging perspective that traditional media cannot match.</p>
+                <div class="service-features">
+                    <h3>Key Features:</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-vr-cardboard"></i> Virtual Tours</h4>
+                            <p>Create interactive walkthroughs for real estate, venues, or locations.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-globe-americas"></i> Immersive Experiences</h4>
+                            <p>Engage users with interactive content suitable for VR and web.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-film"></i> Panoramic Video</h4>
+                            <p>Capture complete surroundings in stunning high-resolution video.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-image">
+                <img src="images/services/service-360media.jpg" alt="Drone capturing a 360 degree panorama" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspections Service -->
+    <section id="inspections" class="service-section">
+        <div class="container">
+            <div class="service-container image-right">
+                <div class="service-content">
+                    <h2>Inspections</h2>
+                    <p>Our drone inspection services provide safe, efficient, and cost-effective solutions for examining infrastructure, buildings, and industrial assets. With specialized drones equipped with high-resolution cameras, thermal imaging, and zoom capabilities, we can access difficult or dangerous areas without scaffolding, rope access, or heavy machinery.</p>
+                    <p>We help identify structural issues, damage, maintenance needs, and potential hazards while keeping personnel safely on the ground. Our detailed inspection reports include high-resolution imagery, thermal data, and professional analysis to help you make informed maintenance and repair decisions.</p>
+                    
+                    <div class="service-features">
+                        <h3>Inspection Applications</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h4><i class="fas fa-building"></i> Building Inspections</h4>
+                                <p>Examine roofs, facades, gutters, and building envelopes for damage, leaks, or deterioration.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-industry"></i> Industrial Inspections</h4>
+                                <p>Inspect towers, tanks, flare stacks, and industrial equipment for maintenance and safety compliance.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-solar-panel"></i> Solar Farm Inspections</h4>
+                                <p>Identify underperforming solar panels, hotspots, and maintenance issues with thermal imaging.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-plug"></i> Utility Inspections</h4>
+                                <p>Survey transmission lines, substations, and utility infrastructure for damage and vegetation encroachment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/drone-inspection.jpg" alt="Drone conducting thermal inspection of a building" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="service-cta">
+                <a href="contact.html" class="btn-primary">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Estate Service -->
+    <section id="real-estate" class="service-section">
+        <div class="container">
+            <div class="service-container">
+                <div class="service-content">
+                    <h2>Real Estate</h2>
+                    <p>Our specialized real estate drone services help property listings stand out in a competitive market. We provide comprehensive aerial media packages that showcase properties from their most flattering angles, highlighting key features, location advantages, and surrounding amenities.</p>
+                    <p>Working with realtors, property developers, and marketing teams, we create stunning visual content that engages potential buyers and drives interest in your listings. Our real estate packages can include aerial photos, video tours, 360° panoramas, and virtual property tours tailored to your specific marketing needs.</p>
+                    
+                    <div class="service-features">
+                        <h3>Real Estate Applications</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h4><i class="fas fa-home"></i> Residential Properties</h4>
+                                <p>Showcase homes with dynamic aerials highlighting the property, yard, neighborhood, and surroundings.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-building"></i> Commercial Properties</h4>
+                                <p>Highlight commercial buildings, parking, access points, and proximity to important infrastructure.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-tree"></i> Land & Acreage</h4>
+                                <p>Demonstrate boundaries, topography, and features of land parcels with comprehensive aerial coverage.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-video"></i> Virtual Tours</h4>
+                                <p>Create immersive property experiences combining exterior aerials with interior footage for complete tours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/real-estate-drone.jpg" alt="Aerial drone view of a luxury property" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="service-cta">
+                <a href="contact.html" class="btn-primary">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to elevate your perspective?</h2>
+                <p>Contact us today to discuss your drone service needs and receive a custom quote.</p>
+                <a href="contact.html" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo/SkyView_Logo.png" alt="SkyView Drone Services Logo">
+                    </a>
+                    <p>Professional drone services for aerial photography, videography, mapping, and inspections. Serving clients nationwide with FAA-certified pilots.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#photography">Aerial Photography</a></li>
+                        <li><a href="services.html#videography">Aerial Videography</a></li>
+                        <li><a href="services.html#mapping">Mapping & Surveying</a></li>
+                        <li><a href="services.html#inspections">Inspections</a></li>
+                        <li><a href="services.html#real-estate">Real Estate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Drone Avenue, Suite 456, Skyview City, SV 12345</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+15551234567">(555) 123-4567</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@skyviewdrones.com">info@skyviewdrones.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SkyView Drone Services. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+</body>
+</html> 
